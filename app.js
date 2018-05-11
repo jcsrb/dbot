@@ -1,3 +1,6 @@
 require('dotenv').config();
+const bot = require('./bot');
+const basicCommands = require('./services/basics');
 
-console.log('Dbot start');
+bot.add(basicCommands);
+bot.start();
