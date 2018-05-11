@@ -54,7 +54,6 @@ client.on('message', async message => {
 });
 
 const add = function (newCommands = {}) {
-  console.log(commands);
   commands = {...commands, ...newCommands};
 };
 
@@ -62,4 +61,6 @@ const start = function () {
   client.login(config.token);
 };
 
-module.exports = {start, add};
+const getCommands = () => commands;
+
+module.exports = {start, add, getCommands};
