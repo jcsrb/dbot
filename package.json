@@ -1,0 +1,23 @@
+{
+  "name": "dbot",
+  "version": "1.0.0",
+  "description": "NodeJS based Discord Bot that runs on my Raspberry Pi ZW",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcsrb/dbot.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jcsrb/dbot/issues"
+  },
+  "homepage": "https://github.com/jcsrb/dbot#readme",
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "dotenv": "^5.0.1"
+  }
+}

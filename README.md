@@ -2,7 +2,7 @@
 NodeJS based Discord Bot that runs on my Raspberry Pi ZW
 
 ## About
-a small bot to run and check on my local network remotly using discord bot
+a small bot to run and check on my local network remotely using discord bot
 only tested Raspberry Pi Zero W running Raspbian GNU/Linux 9 (stretch)
 
 
