@@ -1,3 +1,3 @@
-require('dotenv').config()
+require('dotenv').config();
 
-console.log('Dbot start')
+console.log('Dbot start');

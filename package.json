@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "xo"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,11 @@
   "dependencies": {
     "discord.js": "^11.3.2",
     "dotenv": "^5.0.1"
+  },
+  "xo": {
+    "space": true
+  },
+  "devDependencies": {
+    "xo": "^0.21.0"
   }
 }
