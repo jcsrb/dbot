@@ -1,10 +1,11 @@
 {
   "name": "dbot",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "description": "NodeJS based Discord Bot that runs on my Raspberry Pi ZW",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
+    "dev": "nodemon app.js",
     "test": "xo"
   },
   "repository": {
@@ -26,6 +27,7 @@
     "space": true
   },
   "devDependencies": {
+    "nodemon": "^1.17.4",
     "xo": "^0.21.0"
   }
 }
