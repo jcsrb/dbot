@@ -7,12 +7,13 @@ const buildHelp = commands => {
   Object.keys(commands).sort().forEach(c => helpMessage.push(`\`${botPrefix}${c}\``));
 
   helpMessage.push(`\`${botPrefix}help\` - this message`);
+  helpMessage.push(`\`${botPrefix}man\` - no full manual, just gives you help`);
 
   const help = async (client, message, _) => {
     await message.channel.send(helpMessage.join('\n'));
   };
 
-  return {help};
+  return {help, man: help};
 };
 
 module.exports = {buildHelp};
