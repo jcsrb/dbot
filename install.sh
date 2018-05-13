@@ -18,7 +18,7 @@ sudo /opt/nodejs/bin/forever-service install --foreverOptions " --sourceDir `pwd
 
 sudo /opt/nodejs/bin/forever-service delete dbot
 
-get-oui  # update Ieee MAC list
+get-oui -u https://linuxnet.ca/ieee/oui.txt  # update Ieee MAC list
 cp .env.example .env
 
 echo "Edit .env file and sudo service dbot start"
