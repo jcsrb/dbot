@@ -5,7 +5,7 @@ const status = async (client, message, _) => {
   const m = await message.channel.send('How nice of you to ask');
 
   const uptime = spawnSync('uptime', []).stdout.toString();
-  const wifi = spawnSync('iwgetid', ['-r']).stdout.toString();
+  const wifi = (spawnSync('iwgetid', ['-r']).stdout || "FAILED").toString();
   const publicIp = spawnSync('dig', ['+short', 'myip.opendns.com', '@resolver1.opendns.com']).stdout.toString();
   const privateIp = spawnSync('hostname', ['-I']).stdout.toString();
 
