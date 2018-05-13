@@ -10,9 +10,11 @@ only tested Raspberry Pi Zero W running Raspbian GNU/Linux 9 (stretch)
 
 no promises of correctness, security, user access levels or safety are given
 
-## Features
+## Main Features
 
-* TBD
+* `+help` - get a list of all featuers
+* `+arpscan` - scan local network for hosts
+* more TBD
 
 ## Install
 1) create a discord bot & getting a token [these steps](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token)
