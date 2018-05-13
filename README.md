@@ -23,7 +23,7 @@ curl -o- https://raw.githubusercontent.com/jcsrb/dbot/master/install.sh | bash
 this will install dependecies, clone repo, setup autostarts
 
 3) edit `.env` file to add token from step 1
-4) start to bot for the first time (tbd how)
+4) start the service `sudo service dbot start`
 5) check your discord channel for a hello message
 
 ## Acknowledgments
