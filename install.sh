@@ -16,7 +16,7 @@ npm install --production --no-progress
 sudo npm install -g forever forever-service --production --no-progress
 sudo /opt/nodejs/bin/forever-service install --foreverOptions " --sourceDir `pwd`  --workingDir `pwd`" dbot
 
-sudo /opt/nodejs/bin/forever-service delete dbot
+sudo /opt/nodejs/bin/forever-service install dbot
 
 get-oui -u https://linuxnet.ca/ieee/oui.txt  # update Ieee MAC list
 cp .env.example .env
