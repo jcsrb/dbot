@@ -1,5 +1,8 @@
 // Load up the discord.js library
 const Discord = require('discord.js');
+const Duration = require('duration');
+
+const pkg = require('./package.json');
 
 // This is your client. Some people call it `bot`, some people call it `self`,
 // some might call it `cootchie`. Either way, when you see `client.something`, or `bot.something`,
@@ -15,13 +18,22 @@ const config = {
 // Config value config.prefix contains the message prefix.
 
 let commands = {};
+const startUpTime = new Date();
+
+const updateActivity = () => {
+  const duration = new Duration(startUpTime);
+  const nrOfActions = Object.keys(commands).length;
+
+  client.user.setActivity(`${config.prefix} 👂  ${nrOfActions} 🔨 ${duration.toString(1, 1)} 🏃 - v${pkg.version} `);
+};
+
+const everyMinute = () => {
+  updateActivity();
+};
 
 client.on('ready', () => {
-  // This event will run if the bot starts, and logs in, successfully.
-  console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
-  // Example of changing the bot's playing game to something useful. `client.user` is what the
-  // docs refer to as the 'ClientUser'.
-  client.user.setActivity(`${Object.keys(commands).length} actions - ${Date.now()}`);
+  updateActivity();
+  setInterval(everyMinute, 60 * 1000);
 });
 
 client.on('message', async message => {

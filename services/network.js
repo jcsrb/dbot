@@ -3,7 +3,7 @@ const arpScanner = require('arpscan');
 const map = require('lodash/map');
 
 let scannerActive = false;
-const [interfaceName, networkName] = (spawnSync('iwgetid', []).stdout|| "FAILED").toString().split(' ');
+const [interfaceName, networkName] = (spawnSync('iwgetid', []).stdout || 'FAILED').toString().split(' ');
 
 const arpScannerSettings = {
   command: 'arp-scan',
