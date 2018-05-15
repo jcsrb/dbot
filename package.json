@@ -1,6 +1,6 @@
 {
   "name": "dbot",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "NodeJS based Discord Bot that runs on my Raspberry Pi ZW",
   "main": "app.js",
   "scripts": {
@@ -19,9 +19,12 @@
   "homepage": "https://github.com/jcsrb/dbot#readme",
   "dependencies": {
     "arpscan": "^0.6.0",
+    "ascii-table": "0.0.9",
     "discord.js": "^11.3.2",
     "dotenv": "^5.0.1",
     "duration": "^0.2.0",
+    "getos": "^3.1.0",
+    "human-format": "^0.10.0",
     "lodash": "^4.17.10",
     "request": "^2.85.0",
     "semver-compare": "^1.0.0"
