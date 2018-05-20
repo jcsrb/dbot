@@ -1,3 +1,5 @@
+const confirmHelper = require('../helpers/confirm');
+
 const ping = async (client, message, _) => {
   // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
   // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
@@ -15,4 +17,17 @@ const say = (client, message, args) => {
   message.channel.send(sayMessage);
 };
 
-module.exports = {ping, say};
+// Say with confirmation
+const sayConfirm = (client, message, args) => {
+  const job = () => say(client, message, args);
+  confirmHelper.needsConfirmation('say!', job, message.channel);
+};
+
+const confirm = (client, message, args) => {
+  const jobState = confirmHelper.confirm(args[0]);
+  if (!jobState) {
+    message.channel.send('Nothing to confirm with that code');
+  }
+};
+
+module.exports = {ping, say, 'say!': sayConfirm, confirm};
