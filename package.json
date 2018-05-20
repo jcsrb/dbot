@@ -26,7 +26,7 @@
     "getos": "^3.1.0",
     "human-format": "^0.10.0",
     "lodash": "^4.17.10",
-    "request": "^2.85.0",
+    "request": "^2.86.0",
     "semver-compare": "^1.0.0"
   },
   "xo": {
@@ -34,6 +34,6 @@
   },
   "devDependencies": {
     "nodemon": "^1.17.4",
-    "xo": "^0.21.0"
+    "xo": "^0.21.1"
   }
 }
