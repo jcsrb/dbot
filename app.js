@@ -1,10 +1,10 @@
 require('dotenv').config();
 const bot = require('./bot');
-const basicCommands = require('./services/basics');
-const statusCommands = require('./services/status');
-const updaterCommands = require('./services/updater');
-const networkCommands = require('./services/network');
-const helper = require('./services/help');
+const basicCommands = require('./commands/basics');
+const statusCommands = require('./commands/status');
+const updaterCommands = require('./commands/updater');
+const networkCommands = require('./commands/network');
+const helper = require('./commands/help');
 
 bot.add(basicCommands);
 bot.add(statusCommands);
