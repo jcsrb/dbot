@@ -25,8 +25,10 @@ const sayConfirm = (client, message, args) => {
 
 const confirm = (client, message, args) => {
   const jobState = confirmHelper.confirm(args[0]);
-  if (!jobState) {
-    message.channel.send('Nothing to confirm with that code');
+  if (jobState) {
+    message.react('💚');
+  } else {
+    message.react('💩');
   }
 };
 
