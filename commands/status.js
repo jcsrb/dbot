@@ -25,7 +25,7 @@ const statusStats = () => {
 
   table
     .addRow('Available Actions', 'ask for help')
-    .addRow('Bot Uptime', duration.toString(1, 1))
+    .addRow('Bot Uptime', duration.toString(1, 2))
     .addRow('Action Run', 'TBD');
 
   return table.toString();

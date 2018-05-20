@@ -22,9 +22,7 @@ const startUpTime = new Date();
 
 const updateActivity = () => {
   const duration = new Duration(startUpTime);
-  const nrOfActions = Object.keys(commands).length;
-
-  client.user.setActivity(`${config.prefix} 👂  ${nrOfActions} 🔨 ${duration.toString(1, 1)} 🏃 - v${pkg.version} `);
+  client.user.setActivity(`${config.prefix} 🏃 ${duration.toString(1, 2)} - v${pkg.version} `);
 };
 
 const everyMinute = () => {
