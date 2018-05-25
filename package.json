@@ -27,7 +27,8 @@
     "human-format": "^0.10.0",
     "lodash": "^4.17.10",
     "request": "^2.86.0",
-    "semver-compare": "^1.0.0"
+    "semver-compare": "^1.0.0",
+    "string-to-binary": "^0.1.2"
   },
   "xo": {
     "space": true
