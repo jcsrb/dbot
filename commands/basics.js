@@ -1,4 +1,7 @@
+const _ = require('lodash');
+const stringToBinary = require('string-to-binary');
 const confirmHelper = require('../helpers/confirm');
+const quotes = require('../data/quotes');
 
 const ping = async (client, message, _) => {
   // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
@@ -17,6 +20,10 @@ const say = (client, message, args) => {
   message.channel.send(sayMessage);
 };
 
+const enlightenMe = (client, message, args) => {
+  message.channel.send(stringToBinary(_.sample(quotes)));
+}
+
 // Say with confirmation
 const sayConfirm = (client, message, args) => {
   const job = () => say(client, message, args);
@@ -32,4 +39,4 @@ const confirm = (client, message, args) => {
   }
 };
 
-module.exports = {ping, say, 'say!': sayConfirm, confirm};
+module.exports = {ping, say, 'say!': sayConfirm, confirm, enlightenMe};
