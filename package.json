@@ -1,6 +1,6 @@
 {
   "name": "dbot",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "NodeJS based Discord Bot that runs on my Raspberry Pi ZW",
   "main": "app.js",
   "scripts": {
