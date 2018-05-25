@@ -39,4 +39,4 @@ const confirm = (client, message, args) => {
   }
 };
 
-module.exports = {ping, say, 'say!': sayConfirm, confirm, enlightenMe};
+module.exports = {ping, say, 'say!': sayConfirm, confirm, enlightenme: enlightenMe};
